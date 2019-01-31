@@ -33,6 +33,7 @@ RUN set -x \
 		USE_OPENSSL=1 \
 		USE_PCRE=1 PCREDIR= \
 		USE_ZLIB=1 \
+		USE_LINUX_TPROXY=1 \
 	' \
 	&& make -C /usr/src/haproxy -j "$(nproc)" all $makeOpts \
 	&& make -C /usr/src/haproxy install-bin $makeOpts \
